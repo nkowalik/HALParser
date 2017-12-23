@@ -20,6 +20,7 @@ public class Main {
 
             while ((line = br.readLine()) != null) {
                 int arrowIdx = line.indexOf(arrow);
+                if (arrowIdx == -1) continue;
                 String token = findTokenById(line, arrowIdx);
                 String vector = line.substring(arrowIdx+4);
                 saveTokenToFile(token + arrow + vector + "\n");
